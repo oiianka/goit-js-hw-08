@@ -28,15 +28,16 @@ console.log(getMarkup);
 
 galleryContainer.insertAdjacentHTML("afterbegin", getMarkup);
 
-galleryContainer.addEventListener("click", openModal);
+// galleryContainer.addEventListener("click", openModal);
 
-function openModal(event) {
-	event.preventDefault();
-	if (event.target.nodeName !== "IMG") return;
+// function openModal(event) {
+// 	event.preventDefault();
+// 	if (event.target.nodeName !== "IMG") return;
 
-    var lightbox = new SimpleLightbox('.gallery a', { 
+    let lightbox = new SimpleLightbox('.gallery a', { 
         captionsData: "alt",
 		captionDelay: 250,
      });
-}
+     lightbox.close();
+// }
 
